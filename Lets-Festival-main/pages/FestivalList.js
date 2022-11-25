@@ -80,10 +80,25 @@ const FestivalList = () => {
   const [isChecka, setChecka] = useState(false);
   const [isCheckb, setCheckb] = useState(false);
   const [isCheckc, setCheckc] = useState(false);
+  const [Checkbx, setCheckbx] = useState(false);
 
   return (
     <Layout>
       <div className="container max-w-screen-lg mx-auto ">
+        <div className={Styles.right}>
+          <label>
+            <input
+              className={Styles.checkboxa}
+              type="checkbox"
+              onClick={() => {
+                // setCheck로 state값을 변경해주자.
+                // e로 상태값을 받아왔다. 클릭시 상태값은 !상태값이므로 값이 반전된다 false -> true
+                setCheckbx((e) => !e);
+              }}
+            ></input>
+          </label>
+          <img className={Styles.imga} src="images/pngegg.png"></img>
+        </div>
         <div className="text-xl font-bold mt-5 mb-3 text-center">
           축제 정보 리스트
         </div>
@@ -98,20 +113,18 @@ const FestivalList = () => {
             setCheckc(false);
           }}
         >
-          {isCheck ? "봄" : "-"}
+          {isCheck ? "중식" : "-"}
         </button>
         <button
           className={Styles.btn}
           onClick={() => {
-            // setCheck로 state값을 변경해주자.
-            // e로 상태값을 받아왔다. 클릭시 상태값은 !상태값이므로 값이 반전된다 false -> true
             setCheck(false);
             setChecka((e) => !e);
             setCheckb(false);
             setCheckc(false);
           }}
         >
-          {isChecka ? "여름" : "-"}
+          {isChecka ? "한식" : "-"}
         </button>
         <button
           className={Styles.btn}
@@ -124,20 +137,18 @@ const FestivalList = () => {
             setCheckc(false);
           }}
         >
-          {isCheckb ? "가을" : "-"}
+          {isCheckb ? "중식" : "-"}
         </button>
         <button
           className={Styles.btn}
           onClick={() => {
-            // setCheck로 state값을 변경해주자.
-            // e로 상태값을 받아왔다. 클릭시 상태값은 !상태값이므로 값이 반전된다 false -> true
             setCheck(false);
             setChecka(false);
             setCheckb(false);
             setCheckc((e) => !e);
           }}
         >
-          {isCheckc ? "겨울" : "-"}
+          {isCheckc ? "일식" : "-"}
         </button>
         {isCheck && (
           <div className={Styles.board}>
@@ -166,9 +177,9 @@ const FestivalList = () => {
           <table class="table-auto">
             <thead>
               <tr>
-                <th>여름</th>
-                <th>여름</th>
-                <th>여름</th>
+                <th>한식</th>
+                <th>한식</th>
+                <th>한식</th>
               </tr>
             </thead>
             <tbody>
@@ -195,9 +206,9 @@ const FestivalList = () => {
           <table class="table-auto">
             <thead>
               <tr>
-                <th>가을</th>
-                <th>가을</th>
-                <th>가을</th>
+                <th>일식</th>
+                <th>일식</th>
+                <th>일식</th>
               </tr>
             </thead>
             <tbody>
@@ -224,9 +235,38 @@ const FestivalList = () => {
           <table class="table-auto">
             <thead>
               <tr>
-                <th>겨울</th>
-                <th>겨울</th>
-                <th>겨울</th>
+                <th>중식</th>
+                <th>중식</th>
+                <th>중식</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>The Sliding Mr. Bones (Next Stop, Pottersville)</td>
+                <td>Malcolm Lockyer</td>
+                <td>1961</td>
+              </tr>
+              <tr>
+                <td>Witchy Woman</td>
+                <td>The Eagles</td>
+                <td>1972</td>
+              </tr>
+              <tr>
+                <td>Shining Star</td>
+                <td>Earth, Wind, and Fire</td>
+                <td>1975</td>
+              </tr>
+            </tbody>
+          </table>
+        )}
+
+        {Checkbx && (
+          <table class="table-auto">
+            <thead>
+              <tr>
+                <th>한식</th>
+                <th>한식</th>
+                <th>한식</th>
               </tr>
             </thead>
             <tbody>

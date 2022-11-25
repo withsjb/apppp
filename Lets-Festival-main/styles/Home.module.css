@@ -39,8 +39,9 @@
   background-color: black;
   color: white;
   padding: 10px;
+  
   z-index: 2;
-  opacity: 0.70;
+  opacity: 0.7;
   position: relative;
   margin-top: 455px;
   text-align: center;
@@ -85,7 +86,7 @@
 }
 
 .Youtube_title_a {
-  content: '';
+  content: "";
   width: 350px;
   height: 3px;
   background: linear-gradient(to right, gold, purple);
@@ -111,7 +112,6 @@
   margin: 0px 2%;
   box-sizing: border-box;
 }
-
 
 /* introduce 페이지  */
 

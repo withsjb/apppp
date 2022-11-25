@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const Post = ({ onSaveData }) => {
   const [form, setForm] = useState({});
@@ -16,17 +16,17 @@ const Post = ({ onSaveData }) => {
     onSaveData(form);
     console.log(form);
     setForm({
-      name: '',
-      Content: '',
-      period: '',
-      website: '',
+      name: "",
+      Content: "",
+      period: "",
+      website: "",
     });
   };
 
   return (
     <>
       <div className="text-xl font-bold mt-5 mb-2 text-center">
-        축제 추가하기
+        음식점 추가하기
       </div>
       <form className="mt-3" onSubmit={handleSubmit}>
         <div className="flex flex-col md:flex-row mb-1">
@@ -35,12 +35,12 @@ const Post = ({ onSaveData }) => {
             className="w-full flex-1 mx-2 text-xs font-semibold
 text-gray-600 uppercase"
           >
-            축제 이름
+            음식점 이름
             <input
               className="w-full py-3 px-1 mt-1 text-gray-800 appearance-none border-2 border-gray-100
 focus:text-gray-500 focus:outline-none focus:border-gray-200"
               required
-              placeholder="축제 이름 입력하기"
+              placeholder=" 이름 입력하기"
               type="text"
               name="name"
               value={form.name}
@@ -53,12 +53,12 @@ focus:text-gray-500 focus:outline-none focus:border-gray-200"
             className="w-full flex-1 mx-2 text-xs font-semibold
 text-gray-600 uppercase"
           >
-            축제 내용
+            음식점 장소
             <input
               className="w-full py-3 px-1 mt-1 text-gray-800 appearance-none border-2 border-gray-100
 focus:text-gray-500 focus:outline-none focus:border-gray-200"
               required
-              placeholder="축제 내용을 입력해주세요"
+              placeholder="내용을 입력해주세요"
               type="Content"
               name="Content"
               value={form.Content}
@@ -72,7 +72,7 @@ focus:text-gray-500 focus:outline-none focus:border-gray-200"
             htmlFor="period"
             className="w-full flex-1 mx-2 text-xs font-semibold text-gray-600 uppercase"
           >
-            축제기간
+            음식 종류
             <input
               className="w-full py-3 px-1 mt-1
 text-gray-800 appearance-none
@@ -81,7 +81,7 @@ value={form.Content) onChange-{handleChange} />
 4 type='Content' name='Content
 focus:text-gray-500 focus:outline-none focus:border-gray-200"
               required
-              placeholder="축제 기간을 입력해주세요"
+              placeholder="종류를 입력해주세요"
               type="text"
               name="period"
               value={form.period}
@@ -93,7 +93,7 @@ focus:text-gray-500 focus:outline-none focus:border-gray-200"
             htmlFor="website"
             className="w-full flex-1 mx-2 text-xs font-semibold text-gray-600 uppercase"
           >
-            축제 사이트
+            음식점 사이트
             <input
               className="w-full py-3 px-1 mt-1
 text-gray-800 appearance-none

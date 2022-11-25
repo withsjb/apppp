@@ -56,3 +56,19 @@
   background-color: black;
   color: #2ecc71;
 }
+
+/*쳌박*/
+.checkboxa {
+  position: relative;
+  left: 300px;
+  top: 100px;
+  z-index: 200;
+}
+
+.imga {
+  position: absolute;
+}
+
+.right {
+  height: 800px;
+}
